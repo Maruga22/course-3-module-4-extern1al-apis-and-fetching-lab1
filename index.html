@@ -1,17 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather Alerts App</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Alerts - US Safety Awareness</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Weather Alerts App</h1>
-  <input type="text" id="state-input" placeholder="Enter state abbreviation">
-  <button id="fetch-alerts">Get Weather Alerts</button>
-  <div id="alerts-display"></div>
-  <div id="error-message" class="hidden"></div>
-  <script src="./index.js"></script>
+    <div class="container">
+        <header>
+            <h1>US Weather Alerts</h1>
+            <p>Real-time watches, warnings, and advisories from the National Weather Service</p>
+        </header>
+
+        <main>
+            <div class="search-section">
+                <div class="input-group">
+                    <label for="state-input">Enter State Abbreviation:</label>
+                    <input 
+                        type="text" 
+                        id="state-input" 
+                        placeholder="Enter state abbreviation" 
+                        maxlength="2"
+                        autocomplete="off"
+                    >
+                    <button id="fetch-alerts-btn">Get Weather Alerts</button>
+                </div>
+            </div>
+
+            <div id="loading-spinner" class="spinner hidden"></div>
+            <div id="error-message" class="error-message hidden"></div>
+            <div id="alerts-display"></div>
+        </main>
+    </div>
+
+    <script src="index.js"></script>
 </body>
 </html>
